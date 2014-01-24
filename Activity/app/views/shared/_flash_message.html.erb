@@ -1,0 +1,20 @@
+<% if flash[:notice] %>
+    <div class="flash-notice">
+      <%= flash[:notice] %>
+    </div>
+<% end %>
+<% if flash[:alert] %>
+    <div class="flash-alert">
+      <%= flash[:alert] %>
+    </div>
+<% end %>
+<% if flash[:error] %>
+    <div class="flash-error text-center" style ="width:559px ;margin:auto auto ">
+      <%= flash[:error] %>
+    </div>
+<% end %>
+<%if flash[:reset_password_error]%>
+    <div class="flash-error text-center" style ="width:559px ;margin-top:15px; ">
+      <%= flash[:reset_password_error]%>
+    </div>
+<%end%>

@@ -1,0 +1,25 @@
+<div style="background: #F5F5F5; width: 659px; margin:auto auto auto auto">
+  <div class= "form-group" style="padding: 50px 50px 50px 50px;width:659px ;margin:auto auto">
+    <h4>用户登陆</h4>
+    <div class="col-sm-offset-2 col-sm-10 text-right" >
+      <%= link_to "用户注册",register_path, :style=> "color: #1E90FF"%>
+    </div>
+    <%= form_for :user, :url => "create_login_session" do |f|  %>
+        <div class="input-group" style="margin:20px auto auto auto; width: 559px">
+          <span class="input-group-addon text-center" style="width: 120px">帐号</span>
+          <%= f.text_field :name, :class => "form-control", :style => "width:450px"%>
+        </div>
+        <div class="input-group" style="margin:20px auto auto auto; width: 559px">
+          <span class="input-group-addon text-center" style="width: 120px">密码</span>
+          <%= f.password_field :password,:class => "form-control", :style => "width:450px"%>
+        </div>
+        <div class="col-sm-offset-2 col-sm-10 text-right">
+          <%= link_to "忘记密码",forget_password_path, :style=> "color: #1E90FF"%>
+        </div>
+        <%= render 'shared/flash_message' %>
+           <div class="text-center">
+            <%= f.submit "登录", :class => "btn btn-default", :style => 'margin:20px auto auto auto ;width:150px' %>
+          </div>
+    <% end %>
+  </div>
+</div>
