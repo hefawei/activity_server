@@ -1,0 +1,26 @@
+<div class="panel panel-default" style="margin-left: 180px; margin-right: 180px">
+  <div class="panel-heading ">
+    用户管理
+    <a class="btn btn-default" href="add_user">添加用户</a>
+  </div>
+  <table class="table">
+    <tr>
+      <td>编号</td>
+      <td>用户名</td>
+      <td>操作</td>
+    </tr>
+    <% @users.each do |user|%>
+        <tr>
+          <td> <%= @count +=1 %></td>
+          <td> <%= user.name %></td>
+          <td>
+            <%= link_to '删除',delete_user_path(:deleted_user_id=>user.id),method:'delete',:style => "color: #1E90FF",:confirm=>'确认要删除'+user.name+'吗？' %>
+            <%= link_to '修改密码',modify_user_information_path(:updated_user_id=>user.id),:style => "color: #1E90FF" %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+</div>
+<div align="right">
+<%= will_paginate @users, :previous_label => '上一页', :next_label=>'下一页'  %>
+</div>

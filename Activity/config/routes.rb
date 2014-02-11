@@ -4,12 +4,26 @@ Form::Application.routes.draw do
   get "/register" => "users#register", :as =>"register"
   get "/forget_password"=>"users#forget_password",:as=>"forget_password"
   get"/reset_password_of_question_and_answer"=>"users#reset_password_of_question_and_answer", :as=>"reset_password_of_question_and_answer"
+  get "/set_new_password"=>"users#set_new_password", :as=>"set_new_password"
+
   post"/create_login_session" => "users#create_login_session"
   post"/reset_password_by_name"=>"users#reset_password_by_name"
   post"/check_question_and_answer"=>"users#check_question_and_answer"
+  post"/reset_password_after_answer"=>"users#reset_password_after_answer"
+
   delete "/logout"=>"users#logout", :as=>"logout"
 
   resources :users, only: [:create]
+
+
+  get "administrators/administrator_index"=>"administrators#administrator_index", :as=>"administrator_index"
+  get "administrators/add_user"=>"administrators#add_user",:as=>"add_user"
+  get "administrators/modify_user_information"=>"administrators#modify_user_information",:as=>"modify_user_information"
+
+  post "administrators/add_user"=>"administrators#create_user"
+  delete "delete_user"=>"administrators#delete_user",:as=>"delete_user"
+  post "administrators/update_user_password"=>"administrators#update_user_password"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

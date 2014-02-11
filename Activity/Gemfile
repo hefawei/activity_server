@@ -45,3 +45,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'protected_attributes','~>1.0.5'
+
+gem 'will_paginate'

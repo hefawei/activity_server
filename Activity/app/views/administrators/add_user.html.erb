@@ -1,0 +1,49 @@
+<ol class='breadcrumb' style="align:center">
+  <li><%= link_to '首页', administrator_index_path,:style=>'color:#1E90FF' %></li>
+  <li class="active">添加用户</li>
+</ol>
+<div style="background: #F5F5F5; width: 659px; margin:auto auto auto auto">
+  <div class="form-group" style="padding: 50px 50px 50px 50px;width:659px ;margin:auto auto">
+    <%= form_for @user, :url=>'add_user' do |f| %>
+
+        <div class="input-group" style="margin:20px auto auto auto; width: 559px">
+         <span class="input-group-addon text-center" style="width:120px;">
+           帐号
+         </span>
+          <%= f.text_field :name , :class=>"form-control",:style=>"width:450px;", :placeholder=>"帐号" %>
+        </div>
+        <div class="input-group" style="margin:20px auto auto auto; width: 559px">
+         <span class="input-group-addon text-center" style="width:120px;">
+           请设置密码
+         </span>
+          <%= f.password_field :password , :class=>"form-control",:style=>"width:450px;", :placeholder=>"请设置密码" %>
+        </div>
+        <div class="input-group" style="margin:20px auto auto auto; width: 559px">
+         <span class="input-group-addon text-center" style="width:120px;">
+           请确认密码
+         </span>
+          <%= f.password_field :password_confirmation , :class=>"form-control",:style=>"width:450px;", :placeholder=>"请确认密码" %>
+        </div>
+        <div class="input-group" style="margin:20px auto auto auto; width: 559px">
+         <span class="input-group-addon text-center" style="width:120px;">
+           忘记密码问题
+         </span>
+          <%= f.text_field :password_question , :class=>"form-control",:style=>"width:450px;", :placeholder=>"忘记密码问题" %>
+        </div>
+        <div class="input-group" style="margin:20px auto auto auto; width: 559px">
+         <span class="input-group-addon text-center" style="width:120px;">
+           忘记密码答案
+         </span>
+          <%= f.text_field :password_answer , :class=>"form-control",:style=>"width:450px;", :placeholder=>"忘记密码答案" %>
+        </div>
+        <% if @user.errors.any? %>
+            <dd class="flash-error text-center" style="margin-top:15px;">
+              <%= @user.errors.full_messages.first %>
+            </dd>
+        <%end%>
+        <div class="text-center">
+          <%= f.submit "确认添加", :class =>"btn btn-default",:style => 'margin:20px auto auto auto ;width:150px'%>
+        </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<ol class='breadcrumb' style="align:center">
+  <li><%= link_to '首页', administrator_index_path,:style=>'color:#1E90FF' %></li>
+  <li class="active">修改用户密码</li>
+</ol>
+<div style="background: #F5F5F5; width: 659px; margin:auto auto auto auto">
+  <div class="form-group" style="padding: 50px 50px 50px 50px;width:659px ;margin:auto auto">
+    <%= form_tag "update_user_password" do %>
+        <div class="input-group" style="margin:20px auto auto auto; width: 559px">
+          <span class="input-group-addon text-center" style="width:120px;">帐号</span>
+          <%= text_field_tag :name, params[:name], :class => 'form-control', :style => 'width:450px',
+                             :placeholder => @user_name, :disabled => 'disabledInput' %>
+        <!--  <input class="form-control" type="text" disabled="disabledInput" style="width:450px" placeholder=<%= @user_name%>>-->
+        </div>
+        <div class="input-group" style="margin:20px auto auto auto; width: 559px">
+          <span class="input-group-addon text-center" style="width: 120px">请设置密码</span>
+          <%= password_field_tag :password, params[:password], :class => "form-control",
+                                 :style => "width:450px", :placeholder =>"请输入新密码"%>
+        </div>
+        <div class="input-group" style="margin:20px auto auto auto; width: 559px">
+          <span class="input-group-addon text-center" style="width: 120px">请确认密码</span>
+          <%= password_field_tag :password_confirmation, params[:password_confirmation],
+                                 :class => "form-control", :style => "width:450px", :placeholder =>"请再次输入"%>
+        </div>
+        <%= render 'shared/flash_message' %>
+        <div class="text-center">
+          <%= submit_tag "确认修改", :class => "btn btn-default", :style => 'margin:20px auto auto auto ;width:150px' %>
+        </div>
+    <% end %>
+  </div>
+</div>

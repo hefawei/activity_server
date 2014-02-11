@@ -2,24 +2,24 @@ zh-CN:
   activerecord:
     attributes:
       user:
-        name: "帐号"
+        name: " "
         password: "请设置密码"
-        password_confirmation: "请确认密码"
+        password_confirmation: " "
         password_question: "忘记密码问题"
         password_answer: "忘记密码答案"
     errors:
       models:
         user:
           attributes:
-            password:
-              blank: "不能为空"
-              confirmation: "密码不匹配"
-              too_short: "最短%{count}个字符"
-            password_digest:
-              blank: "不能为空"
             name:
               blank: "请添加用户名"
               taken: "已占用"
+            password:
+              blank: "不能为空"
+              too_short: "最短%{count}个字符"
+            password_confirmation:
+              blank: "密码不能为空"
+              confirmation: "密码不一致，请重新输入"
             password_question:
               blank: "不能为空"
             password_answer:

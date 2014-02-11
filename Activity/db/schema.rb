@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140121060840) do
     t.string   "token"
     t.string   "password_question"
     t.string   "password_answer"
+    t.string   "administrator",     default: "false"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
