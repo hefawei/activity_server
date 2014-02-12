@@ -4,8 +4,13 @@
   </a>
   <ul id="user-links">
     <% if current_user  %>
-        <li style="color: black"><%= link_to "你好," +current_user.name %></li>
-        <li><%= link_to "退出", logout_path, method: "delete", :style => "color: blue" %></li>
+        <% if current_user.administrator=='true' %>
+            <li style="color: black"><%= link_to "你好," + '管理员' %></li>
+            <li><%= link_to "退出", logout_path, method: "delete", :style => "color: blue" %></li>
+        <% else %>
+            <li style="color: black"><%= link_to "你好," +current_user.name %></li>
+            <li><%= link_to "退出", logout_path, method: "delete", :style => "color: blue" %></li>
+        <% end %>
     <% end %>
   </ul>
 </div>
