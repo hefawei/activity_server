@@ -1,0 +1,22 @@
+.no-footer
+  %header
+    活动通
+  .wrapper
+    %form.wrapper-inner
+    .ui-content(style="text-align:center" )
+      %h5
+        用户登录
+    %center
+      .ui-content
+        账号:
+        %input.input-full(ng-model="name" type="text" style="width:50%" placeholder="请输入账号" )
+      %br
+      %br
+      .ui-content
+        密码:
+        %input.input-full(ng-model="password" type="password" style="width:50%" placeholder="请输入密码" )
+        %br
+        %br
+        .ui-content
+          %a.btn-style.btn-2(ng-tap="login_party_bid()" style="width:10%")
+            登录

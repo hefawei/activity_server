@@ -1,0 +1,40 @@
+%header
+  创建活动
+  .header-left(ng-show = 'show_button')
+    %a.btn-style.btn-4( ng-tap = "Activity_list()")
+      返回
+
+.wrapper
+  .index-action( style="margin-top:90px")
+    .index-login
+      .input-prepend
+        %input(ng-model="input_activity" type="text" style="width:60%; height:10%" ng-change="judge_repeat()" placeholder="请输入活动名称")
+
+      %div(ng-show="repeat_prompt" )
+        %p(style="color:red" )
+          活动名称重复,请重新输入！
+  .index-action
+    .btn.btn-primary(ng-disabled="!input_activity "  style="width:60%" ng-tap = "go_to_sign_up_page()" )
+      创建
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

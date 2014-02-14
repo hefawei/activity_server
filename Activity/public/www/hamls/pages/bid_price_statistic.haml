@@ -1,0 +1,20 @@
+%header
+  {{running_item}}
+  ({{bid_result_number}}人)
+  .header-right
+    %button.btn.btn-primary( ng-tap="go_to_bid_result()" )
+      列表
+
+  .header-left
+    %button.btn.btn-primary( ng-tap="back_to_bid_list()")
+      返回
+#wrapper.wrapper-scrollable( style='position:relative;top:50px')
+  %ul.list-style-2
+    %li(ng-repeat="result in result_list"  style="height:42px ; font-size:18px ; word-spacing:20px;")
+      ${{result.price}}
+      {{result.number}}人
+%footer(ng-switch = 'result')
+  %div(ng-switch-when = 'succeed')
+    {{'竞价结果' + ':' +bid_result.name + ' ' +'$'+bid_result.price }}
+  %div(ng-switch-when = 'failed')
+    {{'竞价结果:竞价无效'}}

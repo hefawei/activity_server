@@ -1,0 +1,19 @@
+%header
+  活动列表
+  .header-right
+    .btn.btn-primary(ng-tap="Create_Activities()" ng-model='activity_situation' ng-disabled='activity_situation')
+      创建活动
+
+#wrapper.wrapper.scrollable
+  %ul.list-style-2
+    %li(ng-repeat="List in Lists" ng-tap="detail_message(List.name)"   style="{{List.name|name}} ; height:36px  ")
+      {{List.name}}
+
+
+
+
+
+
+
+
+

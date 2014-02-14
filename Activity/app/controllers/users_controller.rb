@@ -1,5 +1,7 @@
 #encoding: utf-8
 class UsersController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only=>[:authenticate_user]
+
   def welcome
   end
 
@@ -17,6 +19,17 @@ class UsersController < ApplicationController
       redirect_to :action=>'welcome'  #:notice =>"注册成功"
     else
       render :action=>'register'
+    end
+  end
+
+  def authenticate_user
+    user = User.find_by_name(params[:name])
+    respond_to do |format|
+      if user && user.authenticate(params[:password])
+         format.json {render :json=>true}
+      else
+         format.json {render :json=>false}
+      end
     end
   end
 

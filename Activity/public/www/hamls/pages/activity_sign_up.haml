@@ -1,0 +1,53 @@
+%header#create_page_id
+  活动报名
+  %span() {{sign_up_number}}人
+  .header-right(ng-switch = 'button_state')
+    %div(ng-switch-default = 'un_start')
+      %button.btn.btn-primary( ng-tap="Start()" ng-disabled="activity_situation" )
+        开始
+    %div(ng-switch-when = 'started')
+      %button.btn.btn-primary( ng-tap="finish_sign_up()" ng-disabled="activity_situation" )
+        结束
+    %div(ng-switch-when = 'ended')
+      %button.btn.btn-primary( ng-disabled="true" )
+        结束
+  .header-left
+    %button.btn.btn-primary( ng-tap="Back()")
+      返回
+#wrapper.wrapper-scrollable( style='position:relative;top:50px')
+  %ul.list-style-2
+    %li(ng-repeat="information in message_information"   style="height:42px ; word-spacing:20px ; font-size:18px")
+      {{information.name}}
+      {{information.phone}}
+%footer
+  %ul.footer-nav.footer-nav-2tabs
+    %li.active
+      %a( style="font-size:25px")
+        报名
+    %li
+      %a(style="font-size:25px" ng-tap="go_to_bid()")
+        竞价
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

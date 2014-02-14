@@ -1,0 +1,41 @@
+%header
+  {{running_item}}
+  ({{bid_sign_up_result_number}}人)
+  .header-right
+    %button.btn.btn-primary( ng-tap="go_to_bid_price_statistic()" )
+      统计
+
+  .header-left
+    %button.btn.btn-primary( ng-tap="back_to_bid_list()")
+      返回
+#wrapper.wrapper-scrollable( style='position:relative;top:50px')
+  %ul.list-style-2
+    %li(ng-repeat="bid_result in bid_result_list"  style="height:42px ; font-size:18px ; word-spacing:20px;")
+      {{$index+1}}
+      {{bid_result.name}}
+      {{bid_result.phone}}
+      ${{bid_result.price}}
+
+%footer(ng-switch = 'result')
+  %div(ng-switch-when = 'succeed')
+    {{'竞价结果' + ':' +success_people.name + '    ' + '$' + success_people.price + '    ' + success_people.phone}}
+  %div(ng-switch-when = 'failed')
+    {{'竞价结果:竞价无效'}}
+
+#myModal.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times
+        .modal-title.question_size
+      .modal-body
+        %div(style='text-align:center' ng-switch='select')
+          %div(ng-switch-when='have')
+            %h1 {{'竞价结果'}}
+          %div(ng-switch-when='not_have')
+            %h1 {{'竞价无效'}}
+        %div(style='text-align:center' ng-show='show')
+          %div
+            %h4 {{success_people.name + '    ' + '$' + success_people.price + '    ' + success_people.phone }}
+      .modal-footer
+        %button.btn.btn-default(type='button' data-dismiss='modal') {{'close'}}

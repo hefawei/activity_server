@@ -1,0 +1,47 @@
+%header#create_page_id_bid
+  竞价报名
+  %span {{bid_sign_up_number}}人
+  .header-right(ng-switch = 'button_state')
+    %div(ng-switch-default = 'un_start')
+      %button.btn.btn-primary( ng-tap="bid_start()" ng-disabled="activity_situation" )
+        开始
+    %div(ng-switch-when = 'started')
+      %button.btn.btn-primary( ng-tap="bid_end()" ng-disabled="activity_situation" )
+        结束
+    %div(ng-switch-when = 'ended')
+      %button.btn.btn-primary(ng-disabled="activity_situation" )
+        结束
+
+  .header-left
+    %button.btn.btn-primary( ng-tap="back_to_bid_list()")
+      返回
+#wrapper.wrapper-scrollable( style='position:relative;top:50px')
+  %ul.list-style-2
+    %li(ng-repeat="information in bid_information"  style="height:42px ; font-size:18px ; word-spacing:20px;")
+      {{$index+1}}
+      {{information.name}}
+      {{information.phone}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

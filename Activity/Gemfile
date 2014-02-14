@@ -34,7 +34,7 @@ end
 
 # Use ActiveModel has_secure_password
  gem 'bcrypt-ruby', '~> 3.1.2'
-
+#运行has_secure_password时
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -45,5 +45,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'protected_attributes','~>1.0.5'
-
+#保护属性  点击注册按钮时出现错误
 gem 'will_paginate'
+#实现用户显示分页时
