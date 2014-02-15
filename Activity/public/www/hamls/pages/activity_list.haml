@@ -1,5 +1,8 @@
 %header
   活动列表
+  .header-left
+    .btn.btn-primary(ng-tap="synchronous_dates()")
+      同步数据
   .header-right
     .btn.btn-primary(ng-tap="Create_Activities()" ng-model='activity_situation' ng-disabled='activity_situation')
       创建活动

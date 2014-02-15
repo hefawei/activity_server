@@ -1,4 +1,4 @@
-function activity_listCtrl($scope, $navigate) {
+function activity_listCtrl($scope, $navigate,$http) {
 
     $scope.Lists = Activity.get_all_activities();
 
@@ -20,6 +20,32 @@ function activity_listCtrl($scope, $navigate) {
         if (!$scope.activity_situation)
             $navigate.go("/activity_create");
     }
+
+
+    $scope.synchronous_dates = function(){
+
+        var date = get_synchronous_date_post();
+        $http.post('/users/synchronous_user_activity_dates',date)
+            .success(function(response){
+                if(JSON.parse(response)==true){
+                    alert('同步数据成功');
+                }
+            }).error(function(){
+                alert('提交失败');
+            })
+    }
+
+    function get_synchronous_date_post (){
+        var all_activity = Activity.get_every_activity();
+        var activity_sign_ups = Activity.get_activity_sign_up_information();
+        var all_bids = Bid.get_every_bid_information();
+        var bid_sign_ups = Bid.get_bid_sign_ups_information();
+        var date = {all_activities:all_activity,activity_sign_ups_information:activity_sign_ups,
+        all_bids:all_bids,bid_sign_ups_information:bid_sign_ups}
+        return date;
+    }
+
+
 
 
     $scope.change_button_status();

@@ -28,6 +28,7 @@ Form::Application.routes.draw do
 
 
   post"/users/authenticate_user"=>"users#authenticate_user"
+  post"/users/synchronous_user_activity_dates"=>"users#synchronous_user_activity_dates"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

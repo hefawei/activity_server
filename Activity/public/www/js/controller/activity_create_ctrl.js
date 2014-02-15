@@ -33,6 +33,7 @@ function activity_createCtrl($scope, $navigate) {
         $navigate.go("activity_list");
     }
 
+
     $scope.button_show();
     $scope.judge_repeat();
 

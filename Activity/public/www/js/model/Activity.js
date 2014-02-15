@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 function Activity(name) {
+    this.user_name = get_current_user_name();
     this.name = name;
     this.status = 'un_start';
     this.activity_person = [];
@@ -35,6 +36,29 @@ Activity.set_now_activity = function (name) {
 
 Activity.get_now_activity = function () {
     return JSON.parse(localStorage.getItem('now_activity')) || [];
+}
+
+
+
+Activity.get_activity_sign_up_phone = function(){
+    return JSON.parse(localStorage.getItem('activity_sign_ups')).phone
+}
+
+
+Activity.get_activity_of_current_user = function(){
+    var current_user = get_current_user_name();
+    var activities = Activity.get_all_activities();
+    return _.find(activities,function(activity){
+        return  current_user == activity.user_name
+    })
+}
+
+function set_current_user_name(user_name){
+    localStorage.current_user_name = user_name;
+}
+
+function get_current_user_name(){
+    return localStorage.current_user_name
 }
 
 
@@ -134,6 +158,37 @@ Activity.button_situation = function () {
     if (Activity.get_now_activity().status == 'started' || Bid.get_bid_running().status == "started") {
         return true;
     }
+}
+
+Activity.get_activity_sign_ups = function(){
+    return JSON.parse(localStorage.getItem('now_activity')).activity_person
+}
+
+Activity.get_every_activity = function(){
+    var activities = Activity.get_all_activities();
+    var every_activity = [];
+    _.each(activities,function(activity){
+        every_activity.push({user_name:activity.user_name,name:activity.name,
+            status:activity.status})
+    })
+    return every_activity;
+
+}
+
+
+Activity.get_activity_sign_up_information = function(){
+    var activities = Activity.get_all_activities();
+    var sign_ups = Activity.get_activity_sign_ups();
+    var activity_sign_ups = [];
+    var sign_up_activity = {};
+    _.each(activities,function(activity){
+        _.each(activity.activity_person,function(sign_up){
+            sign_up_activity = {user_name:activity.user_name,activity_name:activity.name,
+                sign_up_name:sign_up.name,sign_up_phone:sign_up.phone}
+            activity_sign_ups.push(sign_up_activity);
+        })
+    })
+    return activity_sign_ups;
 }
 
 

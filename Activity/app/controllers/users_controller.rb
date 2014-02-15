@@ -1,6 +1,7 @@
 #encoding: utf-8
 class UsersController < ApplicationController
-  skip_before_filter :verify_authenticity_token, :only=>[:authenticate_user]
+  skip_before_filter :verify_authenticity_token, :only=>[:authenticate_user,
+  :synchronous_user_activity_dates]
 
   def welcome
   end
@@ -12,6 +13,27 @@ class UsersController < ApplicationController
   def login
   end
 
+
+
+  def authenticate_user
+    user = User.find_by_name(params[:user][:name])
+    respond_to do |format|
+      if user && user.authenticate(params[:user][:password])
+         format.json {render :json=>true}
+      else
+         format.json {render :json=>false}
+      end
+    end
+  end
+
+  def synchronous_user_activity_dates
+      respond_to do |format|
+        format.json {render :json=>true}
+      end
+
+
+  end
+
   def create
     @user = User.new(params[:user])
     if @user.save
@@ -19,17 +41,6 @@ class UsersController < ApplicationController
       redirect_to :action=>'welcome'  #:notice =>"注册成功"
     else
       render :action=>'register'
-    end
-  end
-
-  def authenticate_user
-    user = User.find_by_name(params[:name])
-    respond_to do |format|
-      if user && user.authenticate(params[:password])
-         format.json {render :json=>true}
-      else
-         format.json {render :json=>false}
-      end
     end
   end
 
@@ -118,6 +129,8 @@ class UsersController < ApplicationController
     end
 
   end
+
+
 
 
 
