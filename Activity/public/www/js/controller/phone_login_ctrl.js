@@ -8,7 +8,7 @@ function phone_loginCtrl($scope,$http,$navigate){
     }
 
     function post_date_to_server(name,password){
-        $http.post('/users/authenticate_user',{name:name,password:password})
+        $http.post('/synchronous_dates/authenticate_user',{name:name,password:password})
             .success(function(response){
                 if(JSON.parse(response)==true){
                     set_current_user_name(name);

@@ -25,7 +25,7 @@ function activity_listCtrl($scope, $navigate,$http) {
     $scope.synchronous_dates = function(){
 
         var date = get_synchronous_date_post();
-        $http.post('/users/synchronous_user_activity_dates',date)
+        $http.post('/synchronous_dates/synchronous_user_activity_and_bid_dates',date)
             .success(function(response){
                 if(JSON.parse(response)==true){
                     alert('同步数据成功');
