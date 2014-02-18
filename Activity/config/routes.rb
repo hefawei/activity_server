@@ -27,7 +27,6 @@ Form::Application.routes.draw do
 
 
 
-  get "synchronous_dates/show_dates_synchronous_view"=>"synchronous_dates#show_dates_synchronous_view",:as=>"show_dates_synchronous_view"
   get "synchronous_dates/show_activity_sign_up_view"=>"synchronous_dates#show_activity_sign_up_view",:as=>"show_activity_sign_up_view"
   post"/synchronous_dates/authenticate_user"=>"synchronous_dates#authenticate_user"
   post"/synchronous_dates/synchronous_user_activity_and_bid_dates"=>"synchronous_dates#synchronous_user_activity_and_bid_dates"

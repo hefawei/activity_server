@@ -1,3 +1,28 @@
-<div class="container" >
-  <h1 class="welcome">欢迎来到活动通!!</h1>
+<div class="panel panel-default" style="margin-left: 180px; margin-right: 180px">
+  <div class="panel-heading ">
+    活动信息
+  </div>
+  <table class="table">
+    <tr>
+      <td>编号</td>
+      <td>活动名称</td>
+      <td>报名人数</td>
+      <td>竞价次数</td>
+    </tr>
+    <% @activity.each do |activity|%>
+        <tr>
+          <td> <%= @count +=1 %></td>
+          <td> <%= activity.name %></td>
+          <td>
+            <%= link_to activity.sign_up_number, :style => "color: #1E90FF"  %>
+          </td>
+          <td>
+            <%= link_to activity.bid_number, :style => "color: #1E90FF" %>
+          </td>
+        </tr>
+    <%end%>
+  </table>
+</div>
+<div align="center">
+  <%= will_paginate @activity, :previous_label => '上一页', :next_label=>'下一页'  %>
 </div>

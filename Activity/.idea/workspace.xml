@@ -6,13 +6,13 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/application.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1390298286636" ignored="false" />
     <file path="/routes.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392616175939" ignored="false" />
-    <file path="/welcome.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1390528079128" ignored="false" />
+    <file path="/welcome.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392689407152" ignored="false" />
     <file path="/_header.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392195511469" ignored="false" />
     <file path="/application.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1390370153727" ignored="false" />
     <file path="/signup.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1390454131890" ignored="false" />
     <file path="/login.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1390471381228" ignored="false" />
     <file path="/user.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392194262367" ignored="false" />
-    <file path="/users_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392446248665" ignored="false" />
+    <file path="/users_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392647664282" ignored="false" />
     <file path="/schema.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392011523894" ignored="false" />
     <file path="/20140121060840_create_users.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392011591530" ignored="false" />
     <file path="/Gemfile" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392297000193" ignored="false" />
@@ -70,23 +70,26 @@
     <file path="/mobile_client_user_login_view.haml" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392302725997" ignored="false" />
     <file path="$PROJECT_DIR$/public/www/pages/phone_login.html" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392363817984" ignored="false" />
     <file path="/a.dummy" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392343553464" ignored="false" />
-    <file path="/Activity.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392447088562" ignored="false" />
+    <file path="/Activity.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392687425259" ignored="false" />
     <file path="/activity_list.haml" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392364310028" ignored="false" />
-    <file path="/activity_list_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392449700257" ignored="false" />
+    <file path="/activity_list_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392633156159" ignored="false" />
     <file path="/activity_create_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392435799239" ignored="false" />
     <file path="/activity_sign_up_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392371459191" ignored="false" />
-    <file path="/Bid.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392449850044" ignored="false" />
+    <file path="/Bid.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392646760005" ignored="false" />
     <file path="/activity_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392606799723" ignored="false" />
-    <file path="/activity.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392624904081" ignored="false" />
+    <file path="/activity.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392648753958" ignored="false" />
     <file path="/activities_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392603586061" ignored="false" />
-    <file path="/activity_sign_up.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392624476080" ignored="false" />
-    <file path="/bid.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392624513043" ignored="false" />
-    <file path="/bid_sign_up.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392624548050" ignored="false" />
+    <file path="/activity_sign_up.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392647560042" ignored="false" />
+    <file path="/bid.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392648843099" ignored="false" />
+    <file path="/bid_sign_up.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392631225806" ignored="false" />
     <file path="/synchronous_dates_index.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392614053806" ignored="false" />
-    <file path="/synchronous_dates_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392617338961" ignored="false" />
-    <file path="/show_dates_synchronous_view.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392614886357" ignored="false" />
+    <file path="/synchronous_dates_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392632023044" ignored="false" />
+    <file path="/show_dates_synchronous_view.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392632493180" ignored="false" />
     <file path="/show_activity_sign_up_view.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392616544037" ignored="false" />
     <file path="$PROJECT_DIR$/../../../activity-party/Activities/app/controllers/data_synchronous_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392620122234" ignored="false" />
+    <file path="/20140217015522_create_bids.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392687647850" ignored="false" />
+    <file path="/20140217015840_create_bid_sign_ups.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392628440658" ignored="false" />
+    <file path="/20140217015045_create_activities.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392687616458" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,26 +117,28 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
+            <state line="28" column="37" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="synchronous_dates_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/synchronous_dates_controller.rb">
+      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="44" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
+            <state line="7" column="25" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/activity.rb">
+      <file leaf-file-name="welcome.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/users/welcome.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="34" selection-start="650" selection-end="650" vertical-scroll-proportion="0.7419355">
-              <folding />
+            <state line="11" column="38" selection-start="289" selection-end="289" vertical-scroll-proportion="0.2905526">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,25 +150,29 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="GeneratorOptions">
+    <option name="VCS_SHOW_CONFIRMATION" value="true" />
+    <option name="ENVIRONMENT" value="development" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/www/js/controller/phone_login_ctrl.js" />
-        <option value="$PROJECT_DIR$/public/www/js/controller/activity_list_ctrl.js" />
-        <option value="$PROJECT_DIR$/app/views/dates/synchronous_dates_index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/synchronous_dates/show_dates_synchronous_view.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/synchronous_dates/show_activity_sign_up_view.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/synchronous_dates_controller.rb" />
-        <option value="dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..activity_sign_ups" />
-        <option value="dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..users" />
-        <option value="dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..activities" />
-        <option value="dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..bid_sign_ups" />
-        <option value="dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..bids" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/models/activity_sign_up.rb" />
-        <option value="$PROJECT_DIR$/app/models/bid.rb" />
-        <option value="$PROJECT_DIR$/app/models/bid_sign_up.rb" />
         <option value="$PROJECT_DIR$/app/models/activity.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140217015045_create_activities.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140217015522_create_bids.rb" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
+        <option value="dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..activity_sign_ups" />
+        <option value="dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..bids" />
+        <option value="dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..bid_sign_ups" />
+        <option value="$PROJECT_DIR$/public/www/js/model/Bid.js" />
+        <option value="$PROJECT_DIR$/app/models/bid_sign_up.rb" />
+        <option value="$PROJECT_DIR$/public/www/js/model/Activity.js" />
+        <option value="$PROJECT_DIR$/app/views/synchronous_dates/show_dates_synchronous_view.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/synchronous_dates_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/synchronous_dates/show_activity_sign_up_view.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/users/welcome.html.erb" />
       </list>
     </option>
   </component>
@@ -233,6 +242,112 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -272,6 +387,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -288,10 +407,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synchronous_dates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,16 +491,17 @@
     <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
   </component>
-  <component name="RunManager" selected="Rails.Development: form">
+  <component name="RunManager" selected="IRB console.Rails console: form">
     <configuration default="false" name="db:rollback" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="form" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -741,9 +857,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-        <item index="1" class="java.lang.String" itemvalue="Rake.db:rollback" />
-        <item index="2" class="java.lang.String" itemvalue="IRB console.Rails console: form" />
+        <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: form" />
+        <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.db:rollback" />
         <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: form" />
         <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: form" />
       </list>
@@ -801,18 +917,18 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39772728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15981735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18873668" sideWeight="0.6818182" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29680365" sideWeight="0.60227275" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30289194" sideWeight="0.6818182" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31877023" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3181818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39772728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -877,96 +993,34 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140217015522_create_bids.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="50" selection-start="918" selection-end="918" vertical-scroll-proportion="0.26173285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140121060840_create_users.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="13" column="47" selection-start="263" selection-end="263" vertical-scroll-proportion="0.4356261">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140217015045_create_activities.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="23" selection-start="167" selection-end="167" vertical-scroll-proportion="0.17148015">
+        <state line="7" column="21" selection-start="217" selection-end="217" vertical-scroll-proportion="0.22580644">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="332" selection-end="332" vertical-scroll-proportion="0.3015873">
+        <state line="46" column="52" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.19791667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/activity.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/activity_sign_up.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="67" selection-start="258" selection-end="258" vertical-scroll-proportion="0.19354838">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/bid_sign_up.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="66" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/bid.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="50" selection-start="210" selection-end="210" vertical-scroll-proportion="0.16129032">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..bids">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/synchronous_dates_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="44" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..users">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="36" selection-start="195" selection-end="195" vertical-scroll-proportion="0.4516129">
+        <state line="6" column="83" selection-start="268" selection-end="268" vertical-scroll-proportion="0.19791667">
           <folding />
         </state>
       </provider>
@@ -986,22 +1040,86 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="42" selection-start="240" selection-end="240" vertical-scroll-proportion="0.16493055">
+    <entry file="dbDummy://dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..bids">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/activity.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="34" selection-start="650" selection-end="650" vertical-scroll-proportion="0.7419355">
+    <entry file="dbDummy://dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..bid_sign_ups">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/bid_sign_up.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="27" selection-start="544" selection-end="544" vertical-scroll-proportion="0.4516129">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/js/model/Bid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="243" column="33" selection-start="7461" selection-end="7461" vertical-scroll-proportion="0.5381944">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/js/model/Activity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="59" selection-start="5082" selection-end="5082" vertical-scroll-proportion="0.39728352">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="37" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/synchronous_dates/show_activity_sign_up_view.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/synchronous_dates_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="46" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="25" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/welcome.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="38" selection-start="289" selection-end="289" vertical-scroll-proportion="0.2905526">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

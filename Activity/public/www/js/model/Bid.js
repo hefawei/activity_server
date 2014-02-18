@@ -234,17 +234,16 @@ Bid.get_every_bid_information = function(){
     var every_bid_information = [];
     _.each(all_bids,function(bid){
         every_bid_information.push({user_name:bid.user_name,activity_name:bid.activity_name,
-        bid_name:bid.name,status:bid.status})
+        bid_people_number:bid.people.length,bid_name:bid.name,status:bid.status})
     })
     return every_bid_information;
 }
 
 Bid.get_bid_sign_ups_information = function(){
     var all_bids = Bid.get_every_bids();
-    var bid_sign_ups = Bid.get_bid_sign_ups();
     var bid_sign_ups_people = [];
     _.each(all_bids,function(bid){
-        _.each(bid_sign_ups,function(sign_up){
+        _.each(bid.people,function(sign_up){
             bid_sign_ups_people.push({user_name:bid.user_name,activity_name:bid.activity_name,
             bid_name:bid.name,sign_up_name:sign_up.name,sign_up_price:sign_up.price,
             sign_up_phone:sign_up.phone})
@@ -252,8 +251,6 @@ Bid.get_bid_sign_ups_information = function(){
     })
     return bid_sign_ups_people;
 }
-
-
 
 
 

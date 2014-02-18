@@ -36,11 +36,12 @@ function activity_listCtrl($scope, $navigate,$http) {
     }
 
     function get_synchronous_date_post (){
+        var user_name = get_current_user_name()
         var all_activity = Activity.get_every_activity();
         var activity_sign_ups = Activity.get_activity_sign_up_information();
         var all_bids = Bid.get_every_bid_information();
         var bid_sign_ups = Bid.get_bid_sign_ups_information();
-        var date = {all_activities:all_activity,activity_sign_ups_information:activity_sign_ups,
+        var date = {user_name:user_name,all_activities:all_activity,activity_sign_ups_information:activity_sign_ups,
         all_bids:all_bids,bid_sign_ups_information:bid_sign_ups}
         return date;
     }

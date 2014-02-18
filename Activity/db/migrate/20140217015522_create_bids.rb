@@ -5,6 +5,7 @@ class CreateBids < ActiveRecord::Migration
       t.string :activity_name
       t.string :bid_name
       t.string :status
+      t.integer :bid_people_number
 
       t.timestamps
     end

@@ -1,7 +1,19 @@
 #encoding: utf-8
 class UsersController < ApplicationController
 
+  PER_PAGE_COUNT = 10
+
   def welcome
+    if !current_user
+      redirect_to :login
+    else
+      @activity = Activity.where(:user_name=>current_user.name).order('created_at').paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| User.new
+      @count = 0
+      if params[:page]
+        @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
+      end
+    end
+
   end
 
   def register

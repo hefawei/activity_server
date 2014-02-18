@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20140217015840) do
     t.string   "user_name"
     t.string   "name"
     t.string   "status"
+    t.integer  "bid_number"
+    t.integer  "sign_up_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,6 +48,7 @@ ActiveRecord::Schema.define(version: 20140217015840) do
     t.string   "activity_name"
     t.string   "bid_name"
     t.string   "status"
+    t.integer  "bid_people_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -166,19 +166,21 @@ Activity.get_activity_sign_ups = function(){
 
 Activity.get_every_activity = function(){
     var activities = Activity.get_all_activities();
+    var bid_group = Activity.get_activity_bid_number();
+    console.log(bid_group)
     var every_activity = [];
     _.each(activities,function(activity){
         every_activity.push({user_name:activity.user_name,name:activity.name,
-            status:activity.status})
-    })
-    return every_activity;
+            bid_number:bid_group[activity.name].length,status:activity.status,
+            sign_up_number:activity.activity_person.length})
+     })
+     return every_activity;
 
 }
 
 
 Activity.get_activity_sign_up_information = function(){
     var activities = Activity.get_all_activities();
-    var sign_ups = Activity.get_activity_sign_ups();
     var activity_sign_ups = [];
     var sign_up_activity = {};
     _.each(activities,function(activity){
@@ -190,6 +192,16 @@ Activity.get_activity_sign_up_information = function(){
     })
     return activity_sign_ups;
 }
+
+Activity.get_activity_bid_number = function(){
+    var activities = Activity.get_all_activities();
+    var bids = Bid.get_every_bids();
+    return _.groupBy(bids,function(bid){
+        return bid.activity_name
+    })
+}
+
+
 
 
 

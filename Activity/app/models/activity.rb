@@ -1,6 +1,6 @@
 class Activity < ActiveRecord::Base
 
-  attr_accessible  :user_name,:name,:status ,  :product
+  attr_accessible  :user_name,:name,:status, :bid_number,:sign_up_number ,  :product
 
   def self.synchronous_user_activities_information(params)
     Activity.delete_all(:user_name=>params[:user_name])

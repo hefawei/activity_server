@@ -1,6 +1,6 @@
 class Bid < ActiveRecord::Base
 
-  attr_accessible :user_name,:activity_name,:bid_name,:status    ,:product
+  attr_accessible :user_name,:activity_name,:bid_people_number,:bid_name,:status    ,:product
 
   def self.synchronous_user_bid_information(params)
     Bid.delete_all(:user_name=>params[:user_name])

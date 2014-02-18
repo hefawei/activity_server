@@ -22,27 +22,18 @@ class SynchronousDatesController < ApplicationController
     end
   end
 
-  def show_dates_synchronous_view
-    session[:update_user_id] = nil
-    if !current_user
-      redirect_to :login
-    else
-      @users = User.where(:administrator => 'false' ).order('created_at').paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| User.new
+
+
+
+
+  def show_activity_sign_up_view
+    if params[:activity_name]
+      @activity_sign_ups = ActivitySignUp.where(:user_name => current_user.name,:activity_name =>params[:activity_name]).order('create_at')
+      .paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)
       @count = 0
       if params[:page]
         @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
       end
-    end
-
-
-  end
-
-  def show_activity_sign_up_view
-
-    @activity_sign_ups = ActivitySignUp.where(:user_name => params[:user_name]).order('create_at').paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)||Activity.new
-    @count = 0
-    if params[:page]
-      @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
     end
 
   end
