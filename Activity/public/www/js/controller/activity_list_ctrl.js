@@ -41,8 +41,9 @@ function activity_listCtrl($scope, $navigate,$http) {
         var activity_sign_ups = Activity.get_activity_sign_up_information();
         var all_bids = Bid.get_every_bid_information();
         var bid_sign_ups = Bid.get_bid_sign_ups_information();
+        var bid_price_statistic = Bid.get_statistic_bid_price_length();
         var date = {user_name:user_name,all_activities:all_activity,activity_sign_ups_information:activity_sign_ups,
-        all_bids:all_bids,bid_sign_ups_information:bid_sign_ups}
+        all_bids:all_bids,bid_sign_ups_information:bid_sign_ups,bid_price_statistic:bid_price_statistic}
         return date;
     }
 

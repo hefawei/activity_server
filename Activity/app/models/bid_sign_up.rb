@@ -1,7 +1,7 @@
 class BidSignUp < ActiveRecord::Base
 
   attr_accessible :user_name,:activity_name,:bid_name,:sign_up_name,
-                  :sign_up_price,:sign_up_phone  ,:product
+                  :sign_up_price,:sign_up_phone,:IsWinner  ,:product
 
   def self.synchronous_user_bids_sign_up_information(params)
     BidSignUp.delete_all(:user_name=>params[:user_name])

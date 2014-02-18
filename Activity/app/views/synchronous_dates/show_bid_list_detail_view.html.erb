@@ -1,0 +1,29 @@
+<ol class='breadcrumb' style="align:center">
+  <li><%= link_to '首页', welcome_path,:style=>'color:#1E90FF' %></li>
+  <li><%= link_to '竞价列表',show_bid_list_view_path(:activity_name=>params[:activity_name]),:style=>'color:#1E90FF'%></li>
+  <li class="active"><%= @bid_name%></li>
+</ol>
+<div class="panel panel-default" style="margin-left: 180px; margin-right: 180px">
+  <div class="panel-heading ">
+
+  </div>
+  <table class="table">
+    <tr>
+      <td>编号</td>
+      <td>姓名</td>
+      <td>价格/元</td>
+      <td>手机号码</td>
+    </tr>
+    <% @bid_sign_ups.each do |bid_sign_up|%>
+        <tr>
+          <td> <%= @count +=1 %></td>
+          <td> <%= bid_sign_up.sign_up_name  %></td>
+          <td> <%= bid_sign_up.sign_up_price  %></td>
+          <td> <%= bid_sign_up.sign_up_phone  %></td>
+        </tr>
+    <% end %>
+  </table>
+</div>
+<div align="center">
+  <%= will_paginate @bid_sign_ups, :previous_label => '上一页', :next_label=>'下一页'  %>
+</div>

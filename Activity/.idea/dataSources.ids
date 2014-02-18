@@ -42,6 +42,7 @@
       <column name="sign_up_name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="sign_up_price" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
       <column name="sign_up_phone" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="IsWinner" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
       <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>

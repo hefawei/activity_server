@@ -12,12 +12,17 @@
     <% @activity.each do |activity|%>
         <tr>
           <td> <%= @count +=1 %></td>
-          <td> <%= activity.name %></td>
           <td>
-            <%= link_to activity.sign_up_number, :style => "color: #1E90FF"  %>
+            <%=link_to activity.name,show_bid_list_view_path(:activity_name=>activity.name),
+                       :style=>"color: #1E90FF" %>
           </td>
           <td>
-            <%= link_to activity.bid_number, :style => "color: #1E90FF" %>
+            <%= link_to activity.sign_up_number,show_activity_sign_up_view_path(:activity_name=>activity.name),
+                        :style => "color: #1E90FF"  %>
+          </td>
+          <td>
+            <%= link_to activity.bid_number,show_bid_list_view_path(:activity_name=>activity.name),
+                        :style => "color: #1E90FF" %>
           </td>
         </tr>
     <%end%>

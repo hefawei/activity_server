@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     if !current_user
       redirect_to :login
     else
-      @activity = Activity.where(:user_name=>current_user.name).order('created_at').paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| User.new
+      @activity = Activity.where(:user_name=>current_user.name).order('created_at')
+      .paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| Activity.new
       @count = 0
       if params[:page]
         @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
@@ -21,6 +22,8 @@ class UsersController < ApplicationController
   end
 
   def login
+    session[:user] = nil
+    session[:password_answer] = nil
   end
 
   def create
@@ -48,6 +51,13 @@ class UsersController < ApplicationController
     redirect_to :action=>'login'  #:notice =>"已经退出登录"
   end
 
+  def forget_password
+    session[:user] = nil
+    session[:password_answer] = nil
+
+
+  end
+
   def reset_password_by_name
     user = User.find_by_name(params[:name])
     if user
@@ -65,8 +75,9 @@ class UsersController < ApplicationController
        redirect_to :action=>'forget_password'
     else
       @password_question = User.find(session[:user]).password_question
-      session[:password_answer]
-      render :action=>'reset_password_of_question_and_answer'
+      if session[:password_answer]
+      redirect_to :action=>'set_new_password'
+      end
     end
   end
 

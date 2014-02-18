@@ -23,18 +23,39 @@ class SynchronousDatesController < ApplicationController
   end
 
 
+  def show_bid_list_view
+    @sign_up_number = Activity.where(:user_name=>current_user.name,:name => params[:activity_name]).first.sign_up_number
+    @bids = Bid.where(:user_name=>current_user.name,:activity_name=> params[:activity_name]).order('created_at')
+    .paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| Bid.new
+    @count = 0
+    if params[:page]
+      @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
+    end
+  end
+
+  def show_bid_list_detail_view
+
+    @bid_name = params[:bid_name]
+    @bid_sign_ups = BidSignUp.where(:user_name => current_user.name,:activity_name=>params[:activity_name],
+      :bid_name =>params[:bid_name]).order('created_at').paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| BidSignUp.new
+    @count = 0
+    if params[:page]
+      @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
+    end
+  end
+
+
 
 
 
   def show_activity_sign_up_view
-    if params[:activity_name]
-      @activity_sign_ups = ActivitySignUp.where(:user_name => current_user.name,:activity_name =>params[:activity_name]).order('create_at')
-      .paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)
+       @activity_sign_ups = ActivitySignUp.where(:user_name => current_user.name,:activity_name =>params[:activity_name]).order('created_at')
+      .paginate(page:params[:page],:per_page=>PER_PAGE_COUNT) || ActivitySignUp.new
       @count = 0
       if params[:page]
         @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
       end
-    end
+
 
   end
 
@@ -71,6 +92,7 @@ class SynchronousDatesController < ApplicationController
     ActivitySignUp.synchronous_user_activities_sign_up_information(params)
     Bid.synchronous_user_bid_information(params)
     BidSignUp.synchronous_user_bids_sign_up_information(params)
+    BidPriceStatistic.get_bid_price_statistic(params)
   end
 
   def respond_to_client_information

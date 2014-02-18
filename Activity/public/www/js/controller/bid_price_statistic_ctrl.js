@@ -5,7 +5,7 @@ function bid_price_statisticCtrl($scope, $navigate) {
     }
 
     $scope.go_to_bid_result = function () {
-        $navigate.go("/bid_result");
+         $navigate.go("/bid_result");
     }
 
 
@@ -22,3 +22,4 @@ function bid_price_statisticCtrl($scope, $navigate) {
 
 
 }
+

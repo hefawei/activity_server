@@ -7,6 +7,7 @@ class CreateBidSignUps < ActiveRecord::Migration
       t.string :sign_up_name
       t.integer :sign_up_price
       t.string :sign_up_phone
+      t.boolean :IsWinner
 
       t.timestamps
     end

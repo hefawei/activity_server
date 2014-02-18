@@ -34,7 +34,7 @@ Bid.get_bid_name = function () {
     var activity_name = now_activity.name;
     var bid_array = Bid.get_every_bids();
     if (now_activity.status == "ended") {
-        var bid = new Bid('竞价' + Bid.set_bid_name(activity_name), activity_name);
+        var bid = new Bid('第' + Bid.set_bid_name(activity_name)+'次竞价', activity_name);
         bid_array.unshift(bid);
         localStorage.setItem("bid_lists", JSON.stringify(bid_array));
         Bid.set_bid_running(bid);
@@ -243,14 +243,58 @@ Bid.get_bid_sign_ups_information = function(){
     var all_bids = Bid.get_every_bids();
     var bid_sign_ups_people = [];
     _.each(all_bids,function(bid){
+        var winner = _.first(get_bid_people_info(bid.people))
         _.each(bid.people,function(sign_up){
+            var isWinner = winner == sign_up ? true : false
             bid_sign_ups_people.push({user_name:bid.user_name,activity_name:bid.activity_name,
             bid_name:bid.name,sign_up_name:sign_up.name,sign_up_price:sign_up.price,
-            sign_up_phone:sign_up.phone})
+            sign_up_phone:sign_up.phone, IsWinner: isWinner})
         })
     })
     return bid_sign_ups_people;
 }
+
+function get_bid_people_info(bid_people){
+    var price_group = get_price_group(bid_people)
+    return _.find(price_group,function(value,key){
+        return  value.length==1
+    })  || []
+
+
+}
+
+function get_price_group(bid_people){
+    return _.groupBy(bid_people,function(list){
+        return  list.price
+    })
+}
+
+Bid.get_statistic_bid_price_length = function(){
+    var all_bids = Bid.get_every_bids();
+    var bid_price_statistic = [];
+    _.each(all_bids,function(bid){
+        var bid_group = get_price_group(bid.people)
+         _.each(bid.people,function(sign_up){
+             bid_price_statistic.push({user_name:bid.user_name,activity_name:bid.activity_name,
+            bid_name:bid.name,bid_price:sign_up.price,price_number:bid_group[sign_up.price].length})
+
+        })
+    })
+    return bid_price_statistic
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
