@@ -1,29 +1,80 @@
 <ol class='breadcrumb' style="align:center">
   <li><%= link_to '首页', welcome_path,:style=>'color:#1E90FF' %></li>
-  <li><%= link_to '竞价列表',show_bid_list_view_path(:activity_name=>params[:activity_name]),:style=>'color:#1E90FF'%></li>
+  <li>
+    <%= link_to '竞价列表',show_bid_list_view_path(:activity_name=>params[:activity_name]),:style=>'color:#1E90FF'%>
+  </li>
   <li class="active"><%= @bid_name%></li>
 </ol>
-<div class="panel panel-default" style="margin-left: 180px; margin-right: 180px">
-  <div class="panel-heading ">
-
-  </div>
-  <table class="table">
-    <tr>
-      <td>编号</td>
-      <td>姓名</td>
-      <td>价格/元</td>
-      <td>手机号码</td>
-    </tr>
-    <% @bid_sign_ups.each do |bid_sign_up|%>
-        <tr>
-          <td> <%= @count +=1 %></td>
-          <td> <%= bid_sign_up.sign_up_name  %></td>
-          <td> <%= bid_sign_up.sign_up_price  %></td>
-          <td> <%= bid_sign_up.sign_up_phone  %></td>
-        </tr>
-    <% end %>
-  </table>
+<div class="bid-show-background text-center" style="background-color:lightgrey" >
+  <% if params[:bid_status] == "started" %>
+      <h4 style="padding-top: 40px; font-size: 30px">
+        活动竞价正在进行中,请点击首页的同步展示按钮查看竞价信息。
+      </h4>
+  <% else %>
+      <% if @bid_winners %>
+        <% @bid_winners.each do |bid_winner|%>
+          <h4 style="padding-top: 20px"><%= "获胜者: " + bid_winner.sign_up_name %></h4>
+          <h4><%= "出价: "   + bid_winner.sign_up_price.to_s + "元" %></h4>
+          <h4><%= "手机号: " + bid_winner.sign_up_phone %></h4>
+        <% end %>
+      <% else %>
+          <h4 style="padding-top: 40px; font-size: 30px">竞价无效，没有胜出者！</h4>
+      <% end %>
+  <% end %>
 </div>
-<div align="center">
-  <%= will_paginate @bid_sign_ups, :previous_label => '上一页', :next_label=>'下一页'  %>
+<br>
+<br>
+<div style="margin: 10px 180px auto 180px">
+  <ul class="nav nav-tabs" id="myTab">
+    <li class="active" style="width: 50%; text-align: center">
+      <a href="#home" data-toggle="tab" >
+        出价列表
+      </a>
+    </li>
+    <li style="width: 50%; text-align: center">
+      <a href="#profile" data-toggle="tab">
+        价格统计
+      </a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="home">
+      <table class="table" style="text-align: center">
+        <tr>
+          <td>编号</td>
+          <td>姓名</td>
+          <td>价格/元</td>
+          <td>手机号</td>
+        </tr>
+        <% @bid_sign_ups.each do |bid_sign_up| %>
+            <tr >
+              <td><%= @count += 1%></td>
+              <td><%= bid_sign_up.sign_up_name  %></td>
+              <td><%= bid_sign_up.sign_up_price %></td>
+              <td><%= bid_sign_up.sign_up_phone %></td>
+            </tr>
+        <% end %>
+      </table>
+      <div style="align:center">
+        <%= will_paginate @bid_sign_ups, :previous_label => '上一页', :next_label=>'下一页' %>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="profile">
+      <table class="table" style="text-align: center">
+        <tr>
+          <td>价格/元</td>
+          <td>人数</td>
+        </tr>
+        <% @bid_prices_statistic.each do |bid_price_statistic| %>
+            <tr>
+              <td><%= bid_price_statistic.bid_price %></td>
+              <td><%= bid_price_statistic.price_number %></td>
+            </tr>
+        <% end %>
+      </table>
+      <div style="align:center">
+        <%= will_paginate @bid_prices_statistic, :previous_label => '上一页', :next_label=>'下一页' %>
+      </div>
+    </div>
+  </div>
 </div>

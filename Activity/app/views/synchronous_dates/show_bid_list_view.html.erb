@@ -5,7 +5,8 @@
 <div class="panel panel-default" style="margin-left: 180px; margin-right: 180px">
   <div class="panel-heading ">
     竞价列表
-    <a class="text text-right"><%= link_to '报名列表',show_activity_sign_up_view_path(:activity_name=>params[:activity_name])%>
+    <a class="text text-right">
+      <%= link_to '报名列表',show_activity_sign_up_view_path(:activity_name=>params[:activity_name])%>
     </a>
   </div>
   <table class="table">
@@ -18,7 +19,7 @@
         <tr>
           <td> <%= @count +=1 %></td>
           <td> <%= link_to bid.bid_name,show_bid_list_detail_view_path(:activity_name=>bid.activity_name,
-                       :bid_name=>bid.bid_name),:style=>"color: #1E90FF" %></td>
+                       :bid_name=>bid.bid_name,:bid_status=>bid.status),:style=>"color: #1E90FF" %></td>
           <td><%= bid.bid_people_number.to_s+'/'+ @sign_up_number.to_s %></td>
         </tr>
     <% end %>

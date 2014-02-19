@@ -34,7 +34,10 @@ class SynchronousDatesController < ApplicationController
   end
 
   def show_bid_list_detail_view
-
+    @bid_winners = BidSignUp.where(:user_name => current_user.name,:activity_name=>params[:activity_name],
+                                    :bid_name =>params[:bid_name],:IsWinner => true)
+    @bid_prices_statistic = BidPriceStatistic.where(:user_name => current_user.name,:activity_name=>params[:activity_name],
+      :bid_name =>params[:bid_name]).order('created_at').paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| BidPriceStatistic.new
     @bid_name = params[:bid_name]
     @bid_sign_ups = BidSignUp.where(:user_name => current_user.name,:activity_name=>params[:activity_name],
       :bid_name =>params[:bid_name]).order('created_at').paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| BidSignUp.new

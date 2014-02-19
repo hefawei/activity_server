@@ -244,6 +244,7 @@ Bid.get_bid_sign_ups_information = function(){
     var bid_sign_ups_people = [];
     _.each(all_bids,function(bid){
         var winner = _.first(get_bid_people_info(bid.people))
+        console.log(winner)
         _.each(bid.people,function(sign_up){
             var isWinner = winner == sign_up ? true : false
             bid_sign_ups_people.push({user_name:bid.user_name,activity_name:bid.activity_name,
@@ -255,12 +256,19 @@ Bid.get_bid_sign_ups_information = function(){
 }
 
 function get_bid_people_info(bid_people){
-    var price_group = get_price_group(bid_people)
+    var price_group = get_price_after_sort_group(bid_people)
     return _.find(price_group,function(value,key){
         return  value.length==1
     })  || []
 
 
+}
+
+function get_price_after_sort_group(bid_people){
+    var prices_group = get_price_group(bid_people)
+    return _.sortBy(prices_group,function(value,key){
+        return parseInt(key)
+    })
 }
 
 function get_price_group(bid_people){
