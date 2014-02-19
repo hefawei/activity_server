@@ -154,7 +154,7 @@ Bid.get_right_people = function () {
     var peoples = Bid.get_result_people();
     for (var i = 0, j = peoples.length; i < j; ++i) {
         var length = _.filter(peoples,function (people) {
-            return people.price == peoples[i].price;
+            return parseInt(people.price)  == parseInt(peoples[i].price)
         }).length;
         if (length == 1) {
             return peoples[i];
@@ -244,7 +244,6 @@ Bid.get_bid_sign_ups_information = function(){
     var bid_sign_ups_people = [];
     _.each(all_bids,function(bid){
         var winner = _.first(get_bid_people_info(bid.people))
-        console.log(winner)
         _.each(bid.people,function(sign_up){
             var isWinner = winner == sign_up ? true : false
             bid_sign_ups_people.push({user_name:bid.user_name,activity_name:bid.activity_name,
@@ -256,7 +255,7 @@ Bid.get_bid_sign_ups_information = function(){
 }
 
 function get_bid_people_info(bid_people){
-    var price_group = get_price_after_sort_group(bid_people)
+    var price_group = get_price_group(bid_people)
     return _.find(price_group,function(value,key){
         return  value.length==1
     })  || []
@@ -264,17 +263,13 @@ function get_bid_people_info(bid_people){
 
 }
 
-function get_price_after_sort_group(bid_people){
-    var prices_group = get_price_group(bid_people)
-    return _.sortBy(prices_group,function(value,key){
-        return parseInt(key)
-    })
-}
+
 
 function get_price_group(bid_people){
     return _.groupBy(bid_people,function(list){
-        return  list.price
+        return  parseInt(list.price)
     })
+
 }
 
 Bid.get_statistic_bid_price_length = function(){
@@ -284,7 +279,7 @@ Bid.get_statistic_bid_price_length = function(){
         var bid_group = get_price_group(bid.people)
          _.each(bid.people,function(sign_up){
              bid_price_statistic.push({user_name:bid.user_name,activity_name:bid.activity_name,
-            bid_name:bid.name,bid_price:sign_up.price,price_number:bid_group[sign_up.price].length})
+            bid_name:bid.name,bid_price:sign_up.price,price_number:bid_group[parseInt(sign_up.price)].length})
 
         })
     })

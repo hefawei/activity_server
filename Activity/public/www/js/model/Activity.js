@@ -66,6 +66,13 @@ Activity.get_all_activities = function () {
     return JSON.parse(localStorage.getItem('input_values')) || [];
 }
 
+Activity.get_current_user_activities = function(){
+    var activities = Activity.get_all_activities();
+    return _.filter(activities,function(activity){
+        return activity.user_name==get_current_user_name()
+    })
+}
+
 Activity.judge_activity_name_repeat = function (name) {
     var activities = Activity.get_all_activities();
     if (_.find(activities, function (activity) {
@@ -119,14 +126,7 @@ Activity.set_now_activity_status = function (status) {
 }
 
 
-//Activity.check_activity_started = function () {
-//    var activities = Activity.get_all_activities();
-//    if (_.find(activities, function (activity) {
-//        return activity['status'] == 'started'
-//    })) {
-//        return true;
-//    }
-//}
+
 
 
 Activity.check_sign_up_finish = function () {
@@ -167,6 +167,7 @@ Activity.get_activity_sign_ups = function(){
 Activity.get_every_activity = function(){
     var activities = Activity.get_all_activities();
     var bid_group = Activity.get_activity_bid_number();
+    console.log(bid_group)
     var every_activity = [];
     _.each(activities,function(activity){
         every_activity.push({user_name:activity.user_name,name:activity.name,
@@ -197,7 +198,7 @@ Activity.get_activity_bid_number = function(){
     var bids = Bid.get_every_bids();
     return _.groupBy(bids,function(bid){
         return bid.activity_name
-    })
+    }) || []
 }
 
 

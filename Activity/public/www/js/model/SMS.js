@@ -16,7 +16,7 @@ SMS.Check_Activity_BM_or_JJ = function (json_message) {
     if (message_start == "BM" && message_end) {
         return "BM";
     }
-    if (message_start == "JJ" && message_end != '' && message_middle == false) {
+    if (message_start == "JJ" && message_end  && message_middle == false) {
         return "JJ";
     }
 }
