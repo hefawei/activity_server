@@ -74,7 +74,7 @@ Activity.get_current_user_activities = function(){
 }
 
 Activity.judge_activity_name_repeat = function (name) {
-    var activities = Activity.get_all_activities();
+    var activities = Activity.get_current_user_activities();
     if (_.find(activities, function (activity) {
         return activity.name == name;
     })) {

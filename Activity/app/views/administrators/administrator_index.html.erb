@@ -12,7 +12,7 @@
     <% @users.each do |user|%>
         <tr>
           <td> <%= @count +=1 %></td>
-          <td> <%= user.name %></td>
+          <td> <%= link_to user.name ,welcome_path(:user_name=>params[:user_name]),:style => "color: #1E90FF" %></td>
           <td>
             <%= link_to '删除',delete_user_path(:deleted_user_id=>user.id),:method=>:delete,:style => "color: #1E90FF",:confirm=>'确认要删除'+user.name+'吗？' %>
             <%= link_to '修改密码',modify_user_information_path(:updated_user_id=>user.id),:style => "color: #1E90FF" %>

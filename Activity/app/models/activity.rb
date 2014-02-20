@@ -7,8 +7,8 @@ class Activity < ActiveRecord::Base
     if params[:all_activities]
       activities_information = params[:all_activities]
       activities_information.each do |activity_information|
-        activity_info = Activity.create(activity_information)
-        #activity_info.save
+        activity_info = Activity.new(activity_information)
+        activity_info.save
       end
     end
 
