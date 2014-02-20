@@ -1,5 +1,5 @@
 <ol class='breadcrumb' style="align:center">
-  <li><%= link_to '首页', welcome_path,:style=>'color:#1E90FF' %></li>
+  <li><%= link_to '首页', welcome_path(:user_name=>session[:user_name]),:style=>'color:#1E90FF' %></li>
   <li class="active">报名列表</li>
 </ol>
 <div class="panel panel-default" style="margin-left: 180px; margin-right: 180px">

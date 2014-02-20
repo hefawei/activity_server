@@ -24,27 +24,21 @@ class SynchronousDatesController < ApplicationController
 
 
   def show_bid_list_view
-    @sign_up_number = Activity.where(:user_name=>current_user.name,:name => params[:activity_name]).first.sign_up_number
-    @bids = Bid.where(:user_name=>current_user.name,:activity_name=> params[:activity_name]).order('created_at')
+    @sign_up_number = Activity.where(:user_name=>session[:user_name],:name => params[:activity_name]).first.sign_up_number
+    @bids = Bid.where(:user_name=>session[:user_name],:activity_name=> params[:activity_name]).order('created_at')
     .paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| Bid.new
-    @count = 0
-    if params[:page]
-      @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
-    end
+    will_paginate_views
   end
 
   def show_bid_list_detail_view
-    @bid_winners = BidSignUp.where(:user_name => current_user.name,:activity_name=>params[:activity_name],
+    @bid_winners = BidSignUp.where(:user_name => session[:user_name],:activity_name=>params[:activity_name],
                                     :bid_name =>params[:bid_name],:IsWinner => true)
-    @bid_prices_statistic = BidPriceStatistic.where(:user_name => current_user.name,:activity_name=>params[:activity_name],
+    @bid_prices_statistic = BidPriceStatistic.where(:user_name => session[:user_name],:activity_name=>params[:activity_name],
       :bid_name =>params[:bid_name]).order('created_at').paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| BidPriceStatistic.new
     @bid_name = params[:bid_name]
-    @bid_sign_ups = BidSignUp.where(:user_name => current_user.name,:activity_name=>params[:activity_name],
+    @bid_sign_ups = BidSignUp.where(:user_name => session[:user_name],:activity_name=>params[:activity_name],
       :bid_name =>params[:bid_name]).order('created_at').paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| BidSignUp.new
-    @count = 0
-    if params[:page]
-      @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
-    end
+    will_paginate_views
   end
 
 
@@ -52,15 +46,11 @@ class SynchronousDatesController < ApplicationController
 
 
   def show_activity_sign_up_view
-       @activity_sign_ups = ActivitySignUp.where(:user_name => current_user.name,:activity_name =>params[:activity_name]).order('created_at')
+       @activity_sign_ups = ActivitySignUp.where(:user_name => session[:user_name],:activity_name =>params[:activity_name]).order('created_at')
       .paginate(page:params[:page],:per_page=>PER_PAGE_COUNT) || ActivitySignUp.new
-      @count = 0
-      if params[:page]
-        @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
-      end
-
-
+       will_paginate_views
   end
+
 
   def add_new_activity_information
     Activity.create_new_activity_information(params)
@@ -103,6 +93,15 @@ class SynchronousDatesController < ApplicationController
       format.json {render :json=>true}
     end
   end
+
+  def will_paginate_views
+    @count = 0
+    if params[:page]
+      @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
+    end
+
+  end
+
 
 
 

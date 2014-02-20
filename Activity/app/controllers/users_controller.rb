@@ -6,15 +6,18 @@ class UsersController < ApplicationController
   def welcome
     if !current_user
       redirect_to :login
-    else
-      @activity = Activity.where(:user_name=>current_user.name).order('created_at')
-      .paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| Activity.new
-      @count = 0
-      if params[:page]
-        @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
-      end
+      return
     end
+    #if !current_user || current_user.administrator=='true'
+    #  redirect_to :login
+    #  return
+    #end
 
+    if current_user.administrator=='true' && params[:user_name]
+      go_to_user_welcome_view(params[:user_name])
+      return
+    end
+    go_to_user_welcome_view(current_user.name)
   end
 
   def register
@@ -127,6 +130,22 @@ class UsersController < ApplicationController
     else
       redirect_to :action=>'welcome'  #:notice =>"登录成功"
     end
+
+  end
+
+  def will_paginate_view
+    @count = 0
+    if params[:page]
+      @count = Integer(((Integer(params[:page])-1) * PER_PAGE_COUNT))
+    end
+
+  end
+
+  def go_to_user_welcome_view(user_name)
+    session[:user_name] = user_name
+    @activity = Activity.where(:user_name=>session[:user_name]).order('created_at')
+    .paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| Activity.new
+    will_paginate_view
 
   end
 

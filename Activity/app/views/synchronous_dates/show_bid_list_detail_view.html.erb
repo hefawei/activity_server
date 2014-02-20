@@ -1,5 +1,5 @@
 <ol class='breadcrumb' style="align:center">
-  <li><%= link_to '首页', welcome_path,:style=>'color:#1E90FF' %></li>
+  <li><%= link_to '首页', welcome_path(:user_name=>session[:user_name]),:style=>'color:#1E90FF' %></li>
   <li>
     <%= link_to '竞价列表',show_bid_list_view_path(:activity_name=>params[:activity_name]),:style=>'color:#1E90FF'%>
   </li>
@@ -8,7 +8,7 @@
 <div class="bid-show-background text-center" style="background-color:lightgrey" >
   <% if params[:bid_status] == "started" %>
       <h4 style="padding-top: 40px; font-size: 30px">
-        活动竞价正在进行中,请点击首页的同步展示按钮查看竞价信息。
+        活动竞价正在进行中......
       </h4>
   <% else %>
       <% if @bid_winners %>
@@ -18,7 +18,7 @@
           <h4><%= "手机号: " + bid_winner.sign_up_phone %></h4>
         <% end %>
       <% else %>
-          <h4 style="padding-top: 40px; font-size: 30px">竞价无效，没有胜出者！</h4>
+          <h4 style="padding-top: 40px; font-size: 30px">本次竞价，无人胜出！</h4>
       <% end %>
   <% end %>
 </div>
