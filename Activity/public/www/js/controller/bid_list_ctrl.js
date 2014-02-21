@@ -38,7 +38,7 @@ function bid_listCtrl($scope, $navigate) {
 
 
 
-    $scope.bid_lists = Bid.get_all_bids();
+    $scope.bid_lists = Bid.get_current_user_activity_bids();
 
 
 

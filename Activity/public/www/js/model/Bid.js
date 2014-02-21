@@ -8,22 +8,23 @@ function Bid(name, activity_name) {
 
 
 Bid.get_all_bids = function () {
+    var user_name = get_current_user_name();
     var activity_name = Activity.get_click_activity().name || [];
-    var bids = JSON.parse(localStorage.getItem('bid_lists')) || [];
-    var all_bids = (bids).filter(function (bid) {
-        return bid.activity_name == activity_name;
-    });
-    return all_bids;
+    var bids = Bid.get_every_bids();
+    return _.filter(bids,function (bid) {
+        return (bid.activity_name == activity_name )
+    })
 }
+
 
 Bid.get_every_bids = function () {
     return JSON.parse(localStorage.getItem('bid_lists')) || [];
 }
 
 Bid.set_bid_name = function (activity_name) {
-    var bids = JSON.parse(localStorage.getItem('bid_lists')) || [];
+    var bids = Bid.get_every_bids();
     return _.filter(bids,function (bid) {
-        return bid.activity_name == activity_name;
+        return (bid.activity_name == activity_name) && (bid.user_name==get_current_user_name())
     }).length + 1;
 }
 
@@ -35,11 +36,10 @@ Bid.get_bid_name = function () {
     var bid_array = Bid.get_every_bids();
     if (now_activity.status == "ended") {
         var bid = new Bid('第' + Bid.set_bid_name(activity_name)+'次竞价', activity_name);
-        bid_array.unshift(bid);
-        localStorage.setItem("bid_lists", JSON.stringify(bid_array));
+        bid_array.unshift(bid)
+        Bid.set_bid_lists(bid_array);
         Bid.set_bid_running(bid);
         Bid.save_bid_click(bid);
-
     }
 }
 
@@ -49,6 +49,11 @@ Bid.set_bid_running = function (bid) {
 
 Bid.save_bid_click = function (bid) {
     localStorage.setItem("bid_click", JSON.stringify(bid));
+}
+
+Bid.set_bid_lists = function(bid_array){
+    localStorage.setItem('bid_lists',JSON.stringify(bid_array))
+
 }
 
 
@@ -75,8 +80,11 @@ Bid.get_result_order = function () {
 
 Bid.set_bid_click = function (name) {
     var bids = Bid.get_all_bids();
+    var user_name = get_current_user_name();
+    var click_activity_name = Activity.get_click_activity().name;
     _.map(bids, function (bid) {
-        if (bid.name == name && bid.activity_name == Activity.get_click_activity().name) {
+        if ((bid.name == name) && (bid.activity_name == click_activity_name) &&
+            (bid.user_name == user_name)) {
             localStorage.setItem('bid_click', JSON.stringify(bid));
             return;
         }
@@ -113,11 +121,22 @@ Bid.have_bid_running = function () {
     });
 }
 
+Bid.get_current_user_activity_bids = function() {
+    var user_name = get_current_user_name();
+    var activity_name = Activity.get_click_activity().name || [];
+    var bids =Bid.get_every_bids();
+    return _.filter(bids,function(bid){
+        return (bid.activity_name==activity_name) && (bid.user_name == user_name)
+    })
+}
+
 Bid.update_bid_list = function () {
     var bids = Bid.get_every_bids();
+    var user_name = get_current_user_name();
     var run_bid = Bid.get_bid_running();
     bids = _.map(bids, function (bid) {
-        if ((bid.name == run_bid.name) && (bid.activity_name == run_bid.activity_name)) {
+        if ((bid.name == run_bid.name) && (bid.activity_name == run_bid.activity_name) &&
+            (bid.user_name == user_name)) {
             bid = run_bid;
             return bid;
         }
@@ -182,21 +201,22 @@ Bid.statistic_result = function () {
     localStorage.setItem("result_order", JSON.stringify(results));
 }
 
-Bid.save_bid_list_people = function () {
+Bid.save_bid_click_people = function () {
     var bid_running = Bid.get_bid_running();
-    var bids = JSON.parse(localStorage.getItem("bid_lists")) || [];
+    var user_name = get_current_user_name();
+    var bids = Bid.get_every_bids();
     _.map(bids, function (bid) {
-        if (bid_running.name == bid.name && bid_running.activity_name == bid.activity_name) {
+        if ((bid_running.name == bid.name) && (bid_running.activity_name == bid.activity_name)
+            && (bid_running.user_name == user_name)) {
             bid.people = bid_running.people;
             localStorage.setItem('bid_click', JSON.stringify(bid));
         }
     })
-
-    localStorage.setItem("bid_lists", JSON.stringify(bids));
 }
 
 Bid.save_bid_running_people = function (price, phone) {
     var bid_running = Bid.get_bid_running();
+    var bids = Bid.get_every_bids();
     var bid_person = {};
     var bidder_name = Bid.get_bid_people_name(phone);
     bid_person['name'] = bidder_name;
@@ -204,6 +224,15 @@ Bid.save_bid_running_people = function (price, phone) {
     bid_person['phone'] = phone;
     bid_running.people.unshift(bid_person);
     localStorage.setItem("bid_running", JSON.stringify(bid_running));
+    bids = _.map(bids, function (bid) {
+        if ((bid_running.name == bid.name) && (bid_running.activity_name == bid.activity_name)
+            && (bid.user_name == get_current_user_name())) {
+            bid.people = bid_running.people;
+            return bid;
+        }
+        return bid;
+    })
+    localStorage.setItem("bid_lists", JSON.stringify(bids));
 }
 
 Bid.change_click_bid_list = function () {
@@ -218,8 +247,10 @@ Bid.judge_running_equal_click = function () {
 }
 
 Bid.get_activity_equal_bid = function (name, activity_name) {
+    var user_name = get_current_user_name();
     var bid = _.find(Bid.get_all_bids(), function (bid) {
-        return  (bid.name == name) && (bid.activity_name == activity_name)
+        return  (bid.name == name) && (bid.activity_name == activity_name) &&
+            (bid.user_name ==user_name)
     })
     localStorage.setItem('bid_click', JSON.stringify(bid));
     return bid;

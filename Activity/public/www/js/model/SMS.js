@@ -58,7 +58,7 @@ SMS.save_message_process = function (name, phone) {
     now_activity.activity_person.unshift(Activity_person);
     localStorage.setItem('now_activity', JSON.stringify(now_activity));
     _.map(activities, function (activity) {
-        if (activity.name == now_activity.name) {
+        if ((activity.name == now_activity.name) && (activity.user_name == get_current_user_name())) {
             activity.activity_person.unshift(Activity_person);
         }
     })
@@ -83,7 +83,7 @@ SMS.judge_repeat_message = function (json_message, name) {
 
 SMS.save_bid_people_message = function (price, phone) {
     Bid.save_bid_running_people(price, phone);
-    Bid.save_bid_list_people();
+    Bid.save_bid_click_people();
     SMS.message_refresh_bid_list();
 }
 

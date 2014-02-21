@@ -1,6 +1,6 @@
 function activity_listCtrl($scope, $navigate,$http) {
 
-    $scope.Lists = Activity.get_current_user_activities();
+    $scope.Lists = Activity.get_activities_of_current_user();
 
     $scope.detail_message = function (name) {
         Activity.set_click_activity(name);

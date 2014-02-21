@@ -22,7 +22,7 @@ function phone_loginCtrl($scope,$http,$navigate){
     }
 
     function get_current_user_activity_list(){
-        if(Activity.get_activity_of_current_user()){
+        if(Activity.get_current_user_activities()){
             $navigate.go('/activity_list');
         }
         else{

@@ -60,7 +60,7 @@ var native_accessor = {
         if(SMS.Check_Activity_BM_or_JJ(json_message)=="JJ" )
         {
 
-            var phone=SMS.get_message_phone(json_message);
+            var phone = SMS.get_message_phone(json_message);
             var price = SMS.get_message_price(json_message);
             if(Bid.get_bid_running().status=='started')
             {
@@ -73,7 +73,7 @@ var native_accessor = {
             }
             if(Bid.get_bid_running().status=='un_start')
             {
-                console.log("活动尚未开始，请稍候！");
+                console.log("竞价尚未开始，请稍候！");
             }
             if(Bid.get_bid_running().status=='ended')
             {

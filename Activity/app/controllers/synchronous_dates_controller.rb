@@ -74,18 +74,20 @@ class SynchronousDatesController < ApplicationController
 
 
   def synchronous_user_activity_and_bid_dates
-    synchronous_all_dates
+    synchronous_all_dates(params)
     respond_to_client_information
   end
 
 
   private
-  def synchronous_all_dates
+  def synchronous_all_dates(params)
+    Activity.transaction do
     Activity.synchronous_user_activities_information(params)
     ActivitySignUp.synchronous_user_activities_sign_up_information(params)
     Bid.synchronous_user_bid_information(params)
     BidSignUp.synchronous_user_bids_sign_up_information(params)
     BidPriceStatistic.get_bid_price_statistic(params)
+    end
   end
 
   def respond_to_client_information

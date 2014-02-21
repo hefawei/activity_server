@@ -52,7 +52,7 @@
     <file path="/phone_login.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392258709669" ignored="false" />
     <file path="$PROJECT_DIR$/../../party_bid/www/hamls/pages/phone_login.haml" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392271670100" ignored="false" />
     <file path="$PROJECT_DIR$/../../party_bid/www/js/controller/phone_login_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392272266636" ignored="false" />
-    <file path="/phone_login_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392348365961" ignored="false" />
+    <file path="/phone_login_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392877206143" ignored="false" />
     <file path="$PROJECT_DIR$/../../party_bid/www/js/routes.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392300530544" ignored="false" />
     <file path="/routes.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392343381041" ignored="false" />
     <file path="/phone_login.haml" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392345071358" ignored="false" />
@@ -70,12 +70,12 @@
     <file path="/mobile_client_user_login_view.haml" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392302725997" ignored="false" />
     <file path="$PROJECT_DIR$/public/www/pages/phone_login.html" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392363817984" ignored="false" />
     <file path="/a.dummy" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392343553464" ignored="false" />
-    <file path="/Activity.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392861770327" ignored="false" />
+    <file path="/Activity.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392964150954" ignored="false" />
     <file path="/activity_list.haml" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392364310028" ignored="false" />
-    <file path="/activity_list_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392862125309" ignored="false" />
+    <file path="/activity_list_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392884701135" ignored="false" />
     <file path="/activity_create_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392435799239" ignored="false" />
     <file path="/activity_sign_up_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392371459191" ignored="false" />
-    <file path="/Bid.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392800265227" ignored="false" />
+    <file path="/Bid.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392962592901" ignored="false" />
     <file path="/activity_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392606799723" ignored="false" />
     <file path="/activity.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392861567869" ignored="false" />
     <file path="/activities_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392603586061" ignored="false" />
@@ -83,7 +83,7 @@
     <file path="/bid.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392648843099" ignored="false" />
     <file path="/bid_sign_up.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392716668598" ignored="false" />
     <file path="/synchronous_dates_index.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392614053806" ignored="false" />
-    <file path="/synchronous_dates_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392873316811" ignored="false" />
+    <file path="/synchronous_dates_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392891256623" ignored="false" />
     <file path="/show_dates_synchronous_view.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392632493180" ignored="false" />
     <file path="/show_activity_sign_up_view.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392872051011" ignored="false" />
     <file path="$PROJECT_DIR$/../../../activity-party/Activities/app/controllers/data_synchronous_controller.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392620122234" ignored="false" />
@@ -93,6 +93,8 @@
     <file path="/show_bid_list_view.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392871809971" ignored="false" />
     <file path="/show_bid_list_detail_view.html.erb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392872021672" ignored="false" />
     <file path="/bid_price_statistic.rb" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392732040566" ignored="false" />
+    <file path="/SMS.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392957639110" ignored="false" />
+    <file path="/bid_list_ctrl.js" changelist="261b19f3-054f-45b0-8c74-e857686fe7ef" time="1392958171973" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,19 +119,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <file leaf-file-name="synchronous_dates_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/synchronous_dates_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="7" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+            <state line="90" column="30" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="synchronous_dates_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/synchronous_dates_controller.rb">
+      <file leaf-file-name="Activity.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/www/js/model/Activity.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="3" selection-start="3351" selection-end="3351" vertical-scroll-proportion="1.6267362">
+            <state line="199" column="32" selection-start="5861" selection-end="5861" vertical-scroll-proportion="0.9253472">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bid.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/www/js/model/Bid.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="52" selection-start="1317" selection-end="1317" vertical-scroll-proportion="-11.142858">
               <folding />
             </state>
           </provider>
@@ -149,22 +160,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/synchronous_dates/show_bid_list_detail_view.haml" />
-        <option value="dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..bid_sign_ups" />
-        <option value="$PROJECT_DIR$/public/www/js/model/SMS.js" />
-        <option value="$PROJECT_DIR$/public/www/js/controller/bid_sign_up_ctrl.js" />
-        <option value="$PROJECT_DIR$/public/www/js/model/Bid.js" />
         <option value="dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..activities" />
         <option value="$PROJECT_DIR$/app/models/activity.rb" />
-        <option value="$PROJECT_DIR$/public/www/js/model/Activity.js" />
-        <option value="$PROJECT_DIR$/public/www/js/controller/activity_list_ctrl.js" />
         <option value="$PROJECT_DIR$/app/views/administrators/administrator_index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/welcome.html.erb" />
         <option value="$PROJECT_DIR$/app/views/synchronous_dates/show_bid_list_view.html.erb" />
         <option value="$PROJECT_DIR$/app/views/synchronous_dates/show_bid_list_detail_view.html.erb" />
         <option value="$PROJECT_DIR$/app/views/synchronous_dates/show_activity_sign_up_view.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/public/www/js/controller/phone_login_ctrl.js" />
+        <option value="$PROJECT_DIR$/public/www/js/plugins/sms.js" />
+        <option value="$PROJECT_DIR$/public/www/js/controller/activity_list_ctrl.js" />
         <option value="$PROJECT_DIR$/app/controllers/synchronous_dates_controller.rb" />
+        <option value="$PROJECT_DIR$/public/www/js/model/SMS.js" />
+        <option value="$PROJECT_DIR$/public/www/js/model/Bid.js" />
+        <option value="$PROJECT_DIR$/public/www/js/controller/bid_list_ctrl.js" />
+        <option value="$PROJECT_DIR$/public/www/js/model/Activity.js" />
       </list>
     </option>
   </component>
@@ -205,6 +216,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -299,6 +311,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -348,6 +386,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hamls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hamls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -515,7 +579,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
@@ -879,13 +942,13 @@
       <method />
     </configuration>
     <list size="7">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: form" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: form" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:rollback" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="6" class="java.lang.String" itemvalue="IRB console.Rails console: form" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.db:rollback" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="2" class="java.lang.String" itemvalue="IRB console.Rails console: form" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Production: form" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Development: form" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -949,9 +1012,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18873668" sideWeight="0.6818182" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18873668" sideWeight="0.6818182" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23287672" sideWeight="0.60227275" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24048707" sideWeight="0.60227275" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1029,121 +1092,110 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="18" column="7" selection-start="412" selection-end="412" vertical-scroll-proportion="-0.4295416" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/activity.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="51" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/js/controller/phone_login_ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="47" selection-start="790" selection-end="817" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/bid_price_statistic.rb">
+    <entry file="file://$PROJECT_DIR$/public/www/js/plugins/sms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="75" column="45" selection-start="2444" selection-end="2444" vertical-scroll-proportion="0.7552083">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/welcome.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="46" selection-start="241" selection-end="241" vertical-scroll-proportion="0.3120438" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/js/controller/activity_list_ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="56" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.5572917">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/synchronous_dates_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="30" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/hamls/pages/bid_list.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="48" selection-start="177" selection-end="177" vertical-scroll-proportion="0.17335767">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/js/controller/activity_sign_up_ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="41" selection-start="124" selection-end="124" vertical-scroll-proportion="0.09677419">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/www/js/controller/activity_create_ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="47" selection-start="667" selection-end="693" vertical-scroll-proportion="0.0">
+        <state line="8" column="32" selection-start="276" selection-end="291" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/js/controller/bid_list_ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="69" selection-start="521" selection-end="521" vertical-scroll-proportion="0.13921902">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/js/controller/bid_price_statistic_ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/js/model/SMS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="57" selection-start="2558" selection-end="2558" vertical-scroll-proportion="-28.464285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/js/controller/bid_sign_up_ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="163" selection-end="163" vertical-scroll-proportion="0.12903225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/www/js/model/Bid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="52" selection-start="1317" selection-end="1317" vertical-scroll-proportion="-11.142858">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/www/js/model/Activity.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="39" selection-start="2224" selection-end="2224" vertical-scroll-proportion="2.671875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/www/js/controller/activity_list_ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="88" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.5833333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="40" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="107" selection-start="916" selection-end="935" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/welcome.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="7" selection-start="943" selection-end="943" vertical-scroll-proportion="1.0166976">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/synchronous_dates/show_bid_list_view.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="103" selection-start="265" selection-end="265" vertical-scroll-proportion="0.13547237">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/synchronous_dates/show_bid_list_detail_view.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="67" selection-start="112" selection-end="112" vertical-scroll-proportion="0.034671534">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/synchronous_dates/show_activity_sign_up_view.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="83" selection-start="265" selection-end="265" vertical-scroll-proportion="0.13547237">
-          <folding>
-            <element signature="n#style#0;n#ol#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/administrators/administrator_index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="46" selection-start="256" selection-end="256" vertical-scroll-proportion="0.25364962">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/administrators_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="52" selection-start="178" selection-end="178" vertical-scroll-proportion="-0.9427083">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ad4804e3/9d23d797-9574-4389-8a14-13fdd7b59e49/..activities">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/synchronous_dates_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="3" selection-start="3351" selection-end="3351" vertical-scroll-proportion="1.6267362">
+        <state line="199" column="32" selection-start="5861" selection-end="5861" vertical-scroll-proportion="0.9253472">
           <folding />
         </state>
       </provider>

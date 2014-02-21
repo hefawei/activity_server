@@ -27,7 +27,7 @@ Activity.save_click_activity = function (activity) {
 Activity.set_now_activity = function (name) {
     var activities = Activity.get_all_activities();
     _.map(activities, function (activity) {
-        if (activity.name == name) {
+        if ((activity.name == name) && (activity.user_name==get_current_user_name())) {
             localStorage.setItem('now_activity', JSON.stringify(activity));
             return;
         }
@@ -45,13 +45,7 @@ Activity.get_activity_sign_up_phone = function(){
 }
 
 
-Activity.get_activity_of_current_user = function(){
-    var current_user = get_current_user_name();
-    var activities = Activity.get_all_activities();
-    return _.find(activities,function(activity){
-        return  current_user == activity.user_name
-    })
-}
+
 
 function set_current_user_name(user_name){
     localStorage.current_user_name = user_name;
@@ -67,6 +61,13 @@ Activity.get_all_activities = function () {
 }
 
 Activity.get_current_user_activities = function(){
+    var activities = Activity.get_all_activities();
+    return _.some(activities,function(activity){
+        return activity.user_name==get_current_user_name()
+    })
+}
+
+Activity.get_activities_of_current_user = function() {
     var activities = Activity.get_all_activities();
     return _.filter(activities,function(activity){
         return activity.user_name==get_current_user_name()
@@ -108,9 +109,10 @@ Activity.set_status_of_activity = function () {
 
 Activity.update_activity_list = function () {
     var activities = Activity.get_all_activities();
+    var user_name = get_current_user_name();
     var run_activity = Activity.get_now_activity();
     activities = _.map(activities, function (activity) {
-        if (activity.name == run_activity.name) {
+        if ((activity.name == run_activity.name) && (activity.user_name == user_name)) {
             activity = run_activity;
             return activity;
         }
@@ -173,9 +175,8 @@ Activity.get_every_activity = function(){
         every_activity.push({user_name:activity.user_name,name:activity.name,
             bid_number:bid_group[activity.name].length,status:activity.status,
             sign_up_number:activity.activity_person.length})
-     })
-     return every_activity;
-
+    })
+    return every_activity;
 }
 
 
@@ -194,7 +195,6 @@ Activity.get_activity_sign_up_information = function(){
 }
 
 Activity.get_activity_bid_number = function(){
-    var activities = Activity.get_all_activities();
     var bids = Bid.get_every_bids();
     return _.groupBy(bids,function(bid){
         return bid.activity_name
