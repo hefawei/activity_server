@@ -1,0 +1,31 @@
+<div class="bid-show-background text-center" style="background-color:lightgrey" >
+  <% @user_activities.each do |user_activity|%>
+    <% if user_activity.status == 'started' %>
+      <h2><%= user_activity.name%></h2>
+      <h4><%= '参与人数'+user_activity.sign_up_number.to_s+'/'+user_activity.bid_number.to_s%></h4>
+    <% else %>
+      <h4>没有活动进行！</h4>
+    <% end %>
+  <% end %>
+</div>
+<br>
+<br>
+<div class="tab-content">
+  <table class="table" style="text-align: center">
+    <tr>
+      <td>编号</td>
+      <td>姓名</td>
+      <td>手机号</td>
+    </tr>
+    <% @bid_sign_ups.each do |bid_sign_up| %>
+        <tr >
+          <td><%= @count += 1%></td>
+          <td><%= bid_sign_up.sign_up_name  %></td>
+          <td><%= bid_sign_up.sign_up_phone %></td>
+        </tr>
+    <% end %>
+  </table>
+  <div class="text text-center">
+    <%= will_paginate @bid_sign_ups, :previous_label => '上一页', :next_label=>'下一页' %>
+  </div>
+</div>

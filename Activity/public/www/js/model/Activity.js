@@ -169,7 +169,9 @@ Activity.get_activity_sign_ups = function(){
 Activity.get_every_activity = function(){
     var activities = Activity.get_all_activities();
     var bid_group = Activity.get_activity_bid_number();
+    var user_activities = Activity.get_activities_of_current_user();
     console.log(bid_group)
+    console.log(user_activities)
     var every_activity = [];
     _.each(activities,function(activity){
         every_activity.push({user_name:activity.user_name,name:activity.name,

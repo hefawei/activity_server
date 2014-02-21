@@ -1,6 +1,10 @@
 <div class="panel panel-default" style="margin-left: 180px; margin-right: 180px">
   <div class="panel-heading ">
     活动信息
+    <button>
+      <%= link_to ' 同步展示', synchronous_bidding_infos_path(:user_name=>session[:user_name],
+                              :activity_name =>params[:activity_name],:status=>params[:status])%>
+    </button>
   </div>
   <table class="table">
     <tr>

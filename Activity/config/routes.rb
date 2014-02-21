@@ -26,7 +26,7 @@ Form::Application.routes.draw do
   post "administrators/update_user_password"=>"administrators#update_user_password"
 
 
-
+  get "synchronous_dates/synchronous_bidding_infos"=>"synchronous_dates#synchronous_bidding_infos" ,:as=>"synchronous_bidding_infos"
   get "synchronous_dates/show_bid_list_detail_view" =>"synchronous_dates#show_bid_list_detail_view",:as =>"show_bid_list_detail_view"
   get "synchronous_dates/show_bid_list_view"=>"synchronous_dates#show_bid_list_view",:as=>"show_bid_list_view"
   get "synchronous_dates/show_activity_sign_up_view"=>"synchronous_dates#show_activity_sign_up_view",:as=>"show_activity_sign_up_view"
