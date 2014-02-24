@@ -43,7 +43,7 @@ class SynchronousDatesController < ApplicationController
 
 
   def synchronous_bidding_infos
-    @user_starting_activity = Activity.where(:user_name => session[:user_name],:name=>params[:activity_name],:status=>params[:status])
+    @user_activities = Activity.where(:user_name => session[:user_name],:name=>params[:activity_name],:status=>params[:status])
     @bid_sign_ups = BidSignUp.where(:user_name => session[:user_name],:activity_name=>params[:activity_name],:bid_name =>params[:bid_name])
     .order('created_at').paginate(page:params[:page],:per_page=>PER_PAGE_COUNT)|| BidSignUp.new
     will_paginate_views
